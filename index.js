@@ -130,6 +130,7 @@ async function run() {
             res.send(result)
         })
 
+        // Store new service into database
         app.post('/services', async (req, res) => {
             const service = req.body;
             const result = await serviceCollection.insertOne(service)
