@@ -37,6 +37,7 @@ async function run() {
             res.send('Assignment 11. Learn Plus Server Side')
         })
 
+        // userinfo by email
         app.get('/users/:email', async (req, res) => {
             const email = req.params.email;
             const query = { email }
