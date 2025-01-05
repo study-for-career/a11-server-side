@@ -123,6 +123,7 @@ async function run() {
             res.send(result)
         })
 
+        // Store new user into database
         app.post('/users', async (req, res) => {
             const user = req.body;
             const result = await newUserCollection.insertOne(user)
