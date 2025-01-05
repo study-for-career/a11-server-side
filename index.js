@@ -45,6 +45,7 @@ async function run() {
             res.send(result)
         })
 
+        // Get services by id
         app.get('/services/:id', async (req, res) => {
             try {
                 const id = req.params.id;
@@ -59,6 +60,7 @@ async function run() {
             }
         })
 
+        // Get services by email
         app.get('/services_by_user/:email', async (req, res) => {
             const email = req.params.email;
             const query = { provider_email: email }
