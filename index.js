@@ -27,6 +27,8 @@ async function run() {
         // Connect the client to the server	(optional starting in v4.7)
         // await client.connect();
         // Send a ping to confirm a successful connection
+
+        // Database collections
         const newUserCollection = client.db('learn_plus_db').collection('newUserCollection');
         const serviceCollection = client.db('learn_plus_db').collection('serviceCollection');
         const purchasedServices = client.db('learn_plus_db').collection('purchasedServices');
