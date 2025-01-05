@@ -75,6 +75,7 @@ async function run() {
             res.send(result)
         })
 
+        // Get purchased services from database by email
         app.get('/purchased_services/:email', async (req, res) => {
             const email = req.params.email;
             const query = { user_email: email }
@@ -137,6 +138,7 @@ async function run() {
             res.send(result)
         })
 
+        // Store purchased service into database
         app.post('/purchased_services', async (req, res) => {
             const purchasedService = req.body;
             const result = await purchasedServices.insertOne(purchasedService)
